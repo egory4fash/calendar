@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
+
 import './App.css';
+import logo from './Assets/logo192.png'
+import RevoCalendar from "revo-calendar";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    let events = [
+        {
+            name: "<a href = 'google.com'>Buyout</a>",
+            date: 1594422992000,
+            allDay: true,
+        }
+
+    ];
+    let lang = 'ru'
+    let primaryColor = '#32a852'
+    let secondaryColor = '#ffffff'
+    let allowDeleteEvent=true
+    let allowAddEvent=true
+
+    const dateSelected=() => {
+        alert('wer')
+    }
+
+    let props = {events, lang,primaryColor,secondaryColor,allowDeleteEvent,allowAddEvent,dateSelected}
+
+
+
+    return (
+        <>
+            <div className='qwe'>
+                <RevoCalendar {...props}/>
+            </div>
+        </>
+    );
 }
 
 export default App;
