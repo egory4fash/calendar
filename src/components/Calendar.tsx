@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 import RevoCalendar from "revo-calendar";
 
 import {initialState} from "../data/initial_state";
@@ -23,15 +24,21 @@ const Calendar = () => {
     let lang = 'ru'
     let primaryColor = '#32a852'
     let secondaryColor = '#ffffff'
-    let allowDeleteEvent=true
-    let allowAddEvent=true
+    let allowDeleteEvent = true
+    let allowAddEvent = true
 
-    const eventSelected=(index:number) => {
+    const eventSelected = (index: number) => {
         console.log(initialState[index].test)
     }
+    const mappedState = initialState.map( (m) => {
+return(
+    <div>{m.town}</div>
+    )
 
-    let props = {events, lang,primaryColor,secondaryColor,allowDeleteEvent,allowAddEvent,eventSelected}
+    })
 
+
+    let props = {events, lang, primaryColor, secondaryColor, allowDeleteEvent, allowAddEvent, eventSelected}
 
 
     return (
@@ -39,6 +46,7 @@ const Calendar = () => {
             <div className='qwe'>
                 <RevoCalendar {...props}/>
             </div>
+            {mappedState}
         </>
     )
 }
