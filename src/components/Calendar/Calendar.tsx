@@ -1,32 +1,16 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import s from './Calendar.module.css'
-
-
+import events from "../../data/events";
 import RevoCalendar from "revo-calendar";
+import {initialState } from "../../data/initial_state";
 
-import {initialState} from "../../data/initial_state";
+
+
+
 
 const Calendar = () => {
 
-    let events = [
-        {
-            name: "Buyout",
-            date: 1594422992000,
-            allDay: true,
-        },
-        {
-            name: "123",
-            date: 1679851330000,
-            allDay: true,
-        },
-        // {
-        //     name: "456",
-        //     date: 1679851330001,
-        //     allDay: true,
-        // }
 
-
-    ];
     let lang = 'ru'
     let primaryColor = '#32a852'
     let secondaryColor = '#ffffff'
@@ -59,6 +43,7 @@ return(
     })
 
 
+
     let props = {events, lang, primaryColor, secondaryColor, allowDeleteEvent, allowAddEvent,indicatorColor, eventSelected,dateSelected}
 
 
@@ -67,7 +52,7 @@ return(
             <div className={s.qwe}>
                 <RevoCalendar {...props}/>
             </div>
-            {mappedState}
+            {/*{mappedState}*/}
             <div>{data}</div>
 
 
