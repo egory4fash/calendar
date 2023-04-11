@@ -2,13 +2,20 @@ import React, {useEffect, useState} from 'react';
 import s from './Calendar.module.css'
 import events from "../../data/events";
 import RevoCalendar from "revo-calendar";
-import {initialState } from "../../data/initial_state";
-
+import {initialState, InitialStateType} from "../../data/initial_state";
+import {useDispatch, useSelector} from "react-redux";
+import {getEvent} from "../../data/reducer";
+import {AppRootStateType} from "../../data/store";
+import EventToday from "./EventToday/EventToday";
 
 
 
 
 const Calendar = () => {
+
+// const dataTest = useSelector<AppRootStateType,InitialStateType>(state => state.reducer)
+//     console.log(dataTest)
+    const dispatch = useDispatch()
 
 
     let lang = 'ru'
@@ -18,29 +25,34 @@ const Calendar = () => {
     let allowAddEvent = true
     let indicatorColor = 'red'
 
-    const [data,setData] = useState('')
+    // const [data,setData] = useState('')
 
 
 
     const eventSelected = (index: number) => {
-       setData( initialState[index].description)
-       // return data
+       // setData( initialState[index].description)
+       // // return data
+        console.log(index)
+         dispatch(getEvent(index))
+
+
     }
     const dateSelected = (date: { day:string,month:string,year:string, }) => {
-        console.log(date.month)
+
     }
 
 
-    const mappedState = initialState.map( (m) => {
-return(
-    <div key={m.name}>
-    <div>{m.town}</div>
-    <div>{m.date}</div>
-    <div>{m.description}</div>
-    </div>
-    )
+//     const mappedState = dataTest.map( (m) => {
+// return(
+//     <div key={m.name}>
+//     <div>{m.town}</div>
+//     <div>{m.date}</div>
+//     <div>{m.description}</div>
+//     </div>
+//     )
+//
+//     })
 
-    })
 
 
 
@@ -51,9 +63,11 @@ return(
         <>
             <div className={s.qwe}>
                 <RevoCalendar {...props}/>
+                <EventToday />
             </div>
             {/*{mappedState}*/}
-            <div>{data}</div>
+
+            {/*<div>{data}</div>*/}
 
 
         </>

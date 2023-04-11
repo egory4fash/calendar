@@ -269,12 +269,13 @@ export const initialState:InitialStateType = [
 
 ]
 
-export type InitialStateType = Array<{
+export type InitialStateType = Array<CalendarType>
+
+export type CalendarType = {
     index: number,
     date: number,
     month:number
     name: string,
     description: string,
-    town: string
-}>
+    town: string}
 

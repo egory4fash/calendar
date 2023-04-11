@@ -1,13 +1,14 @@
 import React from 'react';
+import AllYear from './components/AllYear/AllYear';
 import Calendar from "./components/Calendar/Calendar";
-
 
 
 function App() {
 
-    return(
+    return (
         <>
-        <Calendar/>
+            <Calendar/>
+            <AllYear/>
         </>
     )
 }
