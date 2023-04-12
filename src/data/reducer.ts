@@ -12,25 +12,18 @@ export const Reducer = (state:InitialStateType = initialState,action:ActionsType
             // // return newState
 // alert('asdasda')
             console.log(action.payload.index)
-            let filtered = state.filter ( f => f.index === action.payload.index)
+            let filtered = state.data.filter ( f => f.index === action.payload.index)
             console.log(filtered)
-            return state
-
-
+let smth = {...state,currentEvent:filtered[0].description}
+            // console.log(smth)
+            return smth
+        case "SET-CURRENT-EVENT":
+            return {...state,currentEvent:action.payload.text}
         default:
             return state
     }
 }
 
-
-
-
-
-export type ActionsType = GetStateType |
-    GetEventType
-
-export type GetStateType = ReturnType<typeof getState>
-export type GetEventType = ReturnType<typeof getEvent>
 
 export const getState = () => {
     return {
@@ -46,3 +39,20 @@ export const getEvent = (index:number) => {
         }
     } as const
 }
+
+export const setCurrentEvent = (text:string) => {
+    return {
+        type: "SET-CURRENT-EVENT",
+        payload: {
+            text
+        }
+    } as const
+}
+
+export type ActionsType = GetStateType |
+    GetEventType |
+    SetCurrentEventType
+
+export type GetStateType = ReturnType<typeof getState>
+export type GetEventType = ReturnType<typeof getEvent>
+export type SetCurrentEventType = ReturnType<typeof setCurrentEvent>

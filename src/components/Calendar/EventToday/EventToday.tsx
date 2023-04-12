@@ -8,7 +8,7 @@ type EventTodayPropsType = {
 const EventToday=() => {
     return (
         <>
-            <div>123</div>
+            <div></div>
         </>
     )
 }

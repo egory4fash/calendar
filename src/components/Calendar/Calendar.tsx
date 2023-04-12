@@ -15,6 +15,8 @@ const Calendar = () => {
 
 // const dataTest = useSelector<AppRootStateType,InitialStateType>(state => state.reducer)
 //     console.log(dataTest)
+    const text = useSelector<AppRootStateType,string>( state => state.reducer.currentEvent)
+    console.log(`${text} + '111111`)
     const dispatch = useDispatch()
 
 
@@ -25,7 +27,7 @@ const Calendar = () => {
     let allowAddEvent = true
     let indicatorColor = 'red'
 
-    // const [data,setData] = useState('')
+    // const [currentEvent,setCurrentEvent,] = useState(text)
 
 
 
@@ -53,7 +55,10 @@ const Calendar = () => {
 //
 //     })
 
-
+// useEffect( () => {
+//     setCurrentEvent(text)
+//     console.log(text)
+// },[text])
 
 
     let props = {events, lang, primaryColor, secondaryColor, allowDeleteEvent, allowAddEvent,indicatorColor, eventSelected,dateSelected}
@@ -64,6 +69,7 @@ const Calendar = () => {
             <div className={s.qwe}>
                 <RevoCalendar {...props}/>
                 <EventToday />
+                {text?text:'nothing'}
             </div>
             {/*{mappedState}*/}
 
