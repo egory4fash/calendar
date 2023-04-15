@@ -1,7 +1,7 @@
 import React from 'react'
 import {useSelector} from "react-redux";
 import {AppRootStateType} from "../../data/store";
-import {CalendarType, InitialStateType} from "../../data/initial_state";
+import {CalendarType} from "../../data/initial_state";
 import s from './AllYear.module.css'
 
  const AllYear = () => {
@@ -14,7 +14,7 @@ import s from './AllYear.module.css'
 
     let data = allYear.map( (m) => {
         return(
-            <div key={m.name} id ={m.index.toString()} onClick = {onClickHandler}>
+            <div key={`${m.name}+${m.date}`} id ={m.index.toString()} onClick = {onClickHandler}>
                 <div>{m.town}</div>
                 <div>{m.date}</div>
                 <div>{m.description}</div>

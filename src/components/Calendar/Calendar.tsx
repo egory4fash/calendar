@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React  from 'react';
 import s from './Calendar.module.css'
 import events from "../../data/events";
 import RevoCalendar from "revo-calendar";
-import {initialState, InitialStateType} from "../../data/initial_state";
+
 import {useDispatch, useSelector} from "react-redux";
 import {getEvent} from "../../data/reducer";
 import {AppRootStateType} from "../../data/store";
@@ -16,7 +16,6 @@ const Calendar = () => {
 // const dataTest = useSelector<AppRootStateType,InitialStateType>(state => state.reducer)
 //     console.log(dataTest)
     const text = useSelector<AppRootStateType,string>( state => state.reducer.currentEvent)
-    console.log(`${text} + '111111`)
     const dispatch = useDispatch()
 
 
