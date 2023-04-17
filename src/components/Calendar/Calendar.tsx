@@ -15,7 +15,7 @@ const Calendar = () => {
 
 // const dataTest = useSelector<AppRootStateType,InitialStateType>(state => state.reducer)
 //     console.log(dataTest)
-    const text = useSelector<AppRootStateType,string>( state => state.reducer.currentEvent)
+
     const dispatch = useDispatch()
 
 
@@ -68,7 +68,7 @@ const Calendar = () => {
             <div className={s.qwe}>
                 <RevoCalendar {...props}/>
                 <EventToday />
-                {text?text:'nothing'}
+
             </div>
             {/*{mappedState}*/}
 

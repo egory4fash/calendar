@@ -1,8 +1,10 @@
 import React from 'react'
 import {useSelector} from "react-redux";
 import {AppRootStateType} from "../../data/store";
-import {CalendarType} from "../../data/initial_state";
+import {CalendarType, monthsInRussian} from "../../data/initial_state";
 import s from './AllYear.module.css'
+import SingleMonth from "./SingleMonth/SingleMonth";
+
 
  const AllYear = () => {
 
@@ -12,20 +14,31 @@ import s from './AllYear.module.css'
          alert(e.currentTarget.id)
      }
 
-    let data = allYear.map( (m) => {
-        return(
-            <div key={`${m.name}+${m.date}`} id ={m.index.toString()} onClick = {onClickHandler}>
-                <div>{m.town}</div>
-                <div>{m.date}</div>
-                <div>{m.description}</div>
-            </div>)})
+    // let data = allYear.map( (m) => {
+    //     return(
+    //         <div key={`${m.name}+${m.date}`} id ={m.index.toString()} onClick = {onClickHandler}>
+    //             <div>{m.town}</div>
+    //             <div>{m.date}</div>
+    //             <div>{m.description}</div>
+    //         </div>)})
+
+let global = []
+     for (let i=0;i<12;i++) {
+         let title = monthsInRussian[i]
+       let filteredMonth = allYear.filter( (f) => f.month===i)
+          global.push(
+                  <SingleMonth title={title} data={filteredMonth}/>
+
+          )
+
+     }
 
 
 
     return (
         <>
             <div className={s.all}>
-                {data}
+                {global}
             </div>
 
         </>

@@ -14,11 +14,11 @@ export const Reducer = (state:InitialStateType = initialState,action:ActionsType
             console.log(action.payload.index)
             let filtered = state.data.filter ( f => f.index === action.payload.index)
             console.log(filtered)
-let smth = {...state,currentEvent:filtered[0].description}
+let smth = {...state,currentEvent:filtered}
             // console.log(smth)
             return smth
         case "SET-CURRENT-EVENT":
-            return {...state,currentEvent:action.payload.text}
+            return {...state,currentEvent:action.payload.data}
         default:
             return state
     }
@@ -40,11 +40,11 @@ export const getEvent = (index:number) => {
     } as const
 }
 
-export const setCurrentEvent = (text:string) => {
+export const setCurrentEvent = (data:CalendarType[]) => {
     return {
         type: "SET-CURRENT-EVENT",
         payload: {
-            text
+            data
         }
     } as const
 }
