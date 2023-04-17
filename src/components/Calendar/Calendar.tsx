@@ -60,7 +60,7 @@ const Calendar = () => {
 // },[text])
 
 
-    let props = {events, lang, primaryColor, secondaryColor, allowDeleteEvent, allowAddEvent,indicatorColor, eventSelected,dateSelected}
+    let props = {events, lang, primaryColor, secondaryColor,indicatorColor, eventSelected,dateSelected}
 
 
     return (
