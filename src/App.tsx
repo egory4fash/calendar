@@ -4,14 +4,15 @@ import Calendar from "./components/Calendar/Calendar";
 import Header from "./components/Header/Header";
 
 
+
 function App() {
 
     return (
-        <>
+        <div className='font-BOD_NBBI_BELARUS'>
             <Header/>
             <Calendar/>
             <AllYear/>
-        </>
+        </div>
     )
 }
 

@@ -1,3 +1,16 @@
 .container {
     background-color: coral;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.date {
+    display: flex;
+    justify-content: space-between;
+    margin:30px 0px;
+}
+
+.name {
+    font-weight: bolder;
+    font-size: 20px;
 }

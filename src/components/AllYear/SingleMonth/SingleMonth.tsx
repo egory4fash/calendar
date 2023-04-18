@@ -9,6 +9,7 @@ type SingleMonthPropsType = {
 
 
 const SingleMonth = (props: SingleMonthPropsType) => {
+    console.log(props)
 
 
     let mappedData = []

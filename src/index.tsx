@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from "react-redux";
 import {store} from "./data/store";
+import './fonts/a_StamperRg&Bt_BELARUS.ttf'
 
 
 const root = ReactDOM.createRoot(

@@ -25,7 +25,7 @@ const AllYear = () => {
     let global = []
     for (let i = 0; i < 12; i++) {
         let title = monthsInRussian[i]
-        let filteredMonth = allYear.filter((f) => f.month === i+1)
+        let filteredMonth = allYear.filter((f) => +f.month === i+1)
         global.push(
             <SingleMonth key={`${title}+${i.toString()}`}  title={title} data={filteredMonth}/>
         )

@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {
+  font-family: 'a_StamperRg&Bt_BELARUS';
+  src: local('a_StamperRg&Bt_BELARUS'),
+  url('./fonts/a_StamperRg&Bt_BELARUS.ttf') format('truetype');
+  font-weight: bold;
+}
+.font-BOD_NBBI_BELARUS {
+  font-family: 'a_StamperRg&Bt_BELARUS';
+}
