@@ -1,16 +1,16 @@
 import React from 'react'
 import s from './Header.module.css'
-import img from '../../Assets/arnamient-4.png'
+import img from '../../Assets/arnamient-2.png'
 
 const Header = () => {
 
 
     return (
         <>
-            <div className={s.title}>
-                <img src={img}/>
-                <div>ТУТ БУДЕТ НАЗВАНИЕ</div>
-                <img src={img}/>
+            <div className={s.container}>
+                <img className={s.img} src={img}/>
+                <div className={s.title}>ТУТ БУДЕТ НАЗВАНИЕ</div>
+
             </div>
         </>
     )

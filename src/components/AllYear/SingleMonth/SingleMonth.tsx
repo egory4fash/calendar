@@ -20,6 +20,7 @@ const SingleMonth = (props: SingleMonthPropsType) => {
                 <SingleEvent key={`${m.name}+${m.date}`}
                              name={m.name}
                              date={m.date}
+                             month={m.month}
                              town={m.town}
                              description={m.description}/>
             )

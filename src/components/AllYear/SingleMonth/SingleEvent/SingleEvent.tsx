@@ -1,34 +1,43 @@
 import React, {useState} from 'react'
+import s from './SingleEvent.module.css'
 
 type SingleEventPropsType = {
-    name:string
-    date?:string | number,
-    town?:string,
-    description?:string
+    name: string
+    date?: string | number,
+    month?: number | string
+    town?: string,
+    description?: string
 }
 
-const SingleEvent = (props:SingleEventPropsType) => {
+const SingleEvent = (props: SingleEventPropsType) => {
 
-    const [modal,setModal] = useState(false)
-    const modalHandler = (e:React.MouseEvent<HTMLHeadingElement>) => {
+    const [modal, setModal] = useState(false)
+    const modalHandler = (e: React.MouseEvent<HTMLHeadingElement>) => {
         setModal(!modal)
     }
-    const closeModalHandler = (e:React.MouseEvent<HTMLButtonElement>) => {
+    const closeModalHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
         setModal(false)
     }
 
     console.log(props)
     return (
-        <div>
+        <div className={s.container}>
             <h3 onClick={modalHandler}>{props.name}</h3>
-            <div>{props.date}</div>
-            <div>{props.town}</div>
-            <div>-------------</div>
-            {modal?<div>
-            <h4>{props.description}</h4>
-                <button onClick={closeModalHandler}>X</button>
+            <div className={s.date}>
+                <div>
+                    <span>{props.date}</span>
+                    <span> </span>
+                    <span>{props.month}</span>
                 </div>
-            :<span></span>}
+                <div>{props.town}</div>
+            </div>
+
+            {modal ? <div className = {s.description}>
+                    <button className = {s.button} onClick={closeModalHandler}>X</button>
+                    <h4>{props.description}</h4>
+
+                </div>
+                : <></>}
         </div>
     )
 }

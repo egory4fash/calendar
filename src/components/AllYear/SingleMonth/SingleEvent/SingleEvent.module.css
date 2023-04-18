@@ -1,0 +1,21 @@
+.container {
+    margin:25px;
+    background-color: lawngreen;
+}
+
+
+.date {
+    display: flex;
+    justify-content: space-between;
+}
+
+.description {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    background-color: darkseagreen;
+}
+.button {
+    width:25px;
+    height: 25px;
+}

@@ -4,6 +4,7 @@ import {AppRootStateType} from "../../data/store";
 import {CalendarType, monthsInRussian} from "../../data/initial_state";
 import s from './AllYear.module.css'
 import SingleMonth from "./SingleMonth/SingleMonth";
+import img from '../../Assets/arnamient-2.png'
 
 
 const AllYear = () => {
@@ -35,7 +36,7 @@ const AllYear = () => {
 
     return (
         <>
-            <div className={s.all}>
+            <div className={s.all} >
                 {global}
             </div>
 
