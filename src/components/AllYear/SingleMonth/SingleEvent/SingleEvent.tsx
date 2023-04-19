@@ -7,7 +7,7 @@ type SingleEventPropsType = {
     name: string
     date?: string | number,
     month?: number | string
-    town?: string,
+    town?: string | undefined,
     description?: string
 }
 
@@ -21,10 +21,7 @@ const SingleEvent = (props: SingleEventPropsType) => {
         setModal(false)
     }
 
-    let link = ''
-    if (props.town !== undefined) {
-        link = linkMaker(props.town, Links)
-    }
+
 
     return (
         <div className={s.container}>

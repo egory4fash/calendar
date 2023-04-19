@@ -10,7 +10,8 @@
 .date {
     display: flex;
     justify-content: space-between;
-    color:black
+    color:black;
+    flex-wrap: wrap;
 }
 
 .description {
