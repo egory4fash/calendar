@@ -2,6 +2,7 @@ import React from 'react';
 import AllYear from './components/AllYear/AllYear';
 import Calendar from "./components/Calendar/Calendar";
 import Header from "./components/Header/Header";
+import Contacts from "./components/Contacts/Contacts";
 
 
 
@@ -12,6 +13,7 @@ function App() {
             <Header/>
             <Calendar/>
             <AllYear/>
+            <Contacts/>
         </div>
     )
 }

@@ -7,20 +7,23 @@ type SingleEventPropsType = {
     name: string
     date?: string | number,
     month?: number | string
-    town?: string | undefined,
+    town: string ,
     description?: string
 }
 
 const SingleEvent = (props: SingleEventPropsType) => {
 
     const [modal, setModal] = useState(false)
-    const modalHandler = (e: React.MouseEvent<HTMLHeadingElement>) => {
+    const modalHandler = () => {
         setModal(!modal)
     }
-    const closeModalHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const closeModalHandler = () => {
         setModal(false)
     }
 
+
+
+let link = linkMaker(props.town,Links)
 
 
     return (
@@ -32,7 +35,7 @@ const SingleEvent = (props: SingleEventPropsType) => {
                     <span> </span>
                     <span>{props.month}</span>
                 </div>
-                <div>{props.town}</div>
+                <a href ={link} target='_blank'><div className={s.link}>{props.town}</div></a>
             </div>
 
             {modal ? <div className = {s.description}>

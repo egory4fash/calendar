@@ -27,14 +27,14 @@ const SingleMonth = (props: SingleMonthPropsType) => {
     } else {
 
         mappedData.push(
-            <SingleEvent name={'На этот месяц ничего не запланировано...'}/>
+            <SingleEvent name={'На этот месяц ничего не запланировано...'} town ={''}/>
         )
     }
 
 
     return (
         <div className = {s.block}>
-            <h2>{props.title}</h2>
+            <h1>{props.title}</h1>
             {mappedData}
 
 

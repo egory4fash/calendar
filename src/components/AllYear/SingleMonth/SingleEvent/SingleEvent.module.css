@@ -29,3 +29,25 @@
 .title {
     text-decoration: underline solid red;
 }
+
+a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.link {
+    text-decoration: underline solid black;
+}

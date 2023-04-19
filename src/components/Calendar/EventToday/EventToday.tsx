@@ -23,7 +23,7 @@ const EventToday = () => {
             <div key={`${m.name}+${m.date}`}>
                 <div className={s.date}>
                     {m.date ? <span>{`${m.date}.${m.month}.2022`}</span> : ''}
-                    <a href ={link} target='_blank'><span>{m.town}</span></a>
+                    <a href ={link} target='_blank'><span className = {s.link}>{m.town}</span></a>
                 </div>
                 <div className = {s.name}>{m.name}</div>
                 <div className={s.description}>

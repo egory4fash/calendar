@@ -7,10 +7,14 @@
 .date {
     display: flex;
     justify-content: space-between;
-    margin:30px 0px;
+    margin:30px 0;
 }
 
 .name {
     font-weight: bolder;
     font-size: 20px;
+}
+
+.link {
+    text-decoration: underline 1px solid;
 }
