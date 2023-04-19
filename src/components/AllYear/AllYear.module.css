@@ -26,7 +26,7 @@
     font-size: 35px;
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 466px){
     .title {
         font-size: 25px;
     }

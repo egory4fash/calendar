@@ -9,7 +9,7 @@ const Header = () => {
         <>
             <div className={s.container}>
                 <img className={s.img} src={img}/>
-                <div className={s.title}>ТУТ БУДЕТ НАЗВАНИЕ</div>
+                <div className={s.title}>ЭвентВандроўка</div>
 
             </div>
         </>

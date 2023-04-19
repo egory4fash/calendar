@@ -33,7 +33,7 @@ const AllYear = () => {
             {toggle ?
                 <div className={s.container} onClick={toggleHandler}>
                     <img className={s.img} src={img}/>
-                    <div className={s.title}>{'\u2193'} ВЕСЬ КАЛЕНДАРЬ {'\u2193'}</div>
+                    <div className={s.title}> ВЕСЬ КАЛЕНДАРЬ {'\u2193'}</div>
                 </div>
                 : <>
 
@@ -43,7 +43,7 @@ const AllYear = () => {
                     </div>
                     <div className={s.container}>
                         <img className={s.img} src={img}/>
-                        <div className={s.title} onClick={toggleHandler}>{'\u2191'} ВЕСЬ КАЛЕНДАРЬ {'\u2191'}</div>
+                        <div className={s.title} onClick={toggleHandler}> ВЕСЬ КАЛЕНДАРЬ {'\u2191'}</div>
                     </div>
                 </>
             }

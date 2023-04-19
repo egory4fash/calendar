@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
 import s from './SingleEvent.module.css'
+import {linkMaker} from "../../../../helpers/linkMaker";
+import {Links} from "../../../../data/links";
 
 type SingleEventPropsType = {
     name: string
@@ -19,7 +21,11 @@ const SingleEvent = (props: SingleEventPropsType) => {
         setModal(false)
     }
 
-    console.log(props)
+    let link = ''
+    if (props.town !== undefined) {
+        link = linkMaker(props.town, Links)
+    }
+
     return (
         <div className={s.container}>
             <h3 className = {s.title} onClick={modalHandler}>{props.name}</h3>
