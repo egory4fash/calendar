@@ -13,8 +13,7 @@ import EventToday from "./EventToday/EventToday";
 
 const Calendar = () => {
 
-// const dataTest = useSelector<AppRootStateType,InitialStateType>(state => state.reducer)
-//     console.log(dataTest)
+
 
     const dispatch = useDispatch()
 
@@ -28,41 +27,18 @@ const Calendar = () => {
     let onePanelAtATime = true
     let todayColor = 'red'
 
-    // const [currentEvent,setCurrentEvent,] = useState(text)
 
 
 
     const eventSelected = (index: number) => {
-       // setData( initialState[index].description)
-       // // return data
-        console.log(index)
          dispatch(getEvent(index))
-
-
+        const element = document.getElementById('event-today');
+         if (element) {
+             element.scrollIntoView({behavior: 'smooth'});
+         }
     }
-    const dateSelected = (date: { day:string,month:string,year:string, }) => {
 
-    }
-
-
-//     const mappedState = dataTest.map( (m) => {
-// return(
-//     <div key={m.name}>
-//     <div>{m.town}</div>
-//     <div>{m.date}</div>
-//     <div>{m.description}</div>
-//     </div>
-//     )
-//
-//     })
-
-// useEffect( () => {
-//     setCurrentEvent(text)
-//     console.log(text)
-// },[text])
-
-
-    let props = {events, lang, primaryColor, secondaryColor,indicatorColor, eventSelected,dateSelected,
+    let props = {events, lang, primaryColor, secondaryColor,indicatorColor, eventSelected,
         sidebarWidth,detailWidth,onePanelAtATime,todayColor}
 
 
@@ -70,7 +46,9 @@ const Calendar = () => {
         <>
             <div className={s.qwe}>
                 <RevoCalendar {...props}/>
+                <div id = 'event-today'>
                 <EventToday />
+                </div>
 
             </div>
             {/*{mappedState}*/}

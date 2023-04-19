@@ -22,7 +22,7 @@ const SingleEvent = (props: SingleEventPropsType) => {
     console.log(props)
     return (
         <div className={s.container}>
-            <h3 onClick={modalHandler}>{props.name}</h3>
+            <h3 className = {s.title} onClick={modalHandler}>{props.name}</h3>
             <div className={s.date}>
                 <div>
                     <span>{props.date}</span>
