@@ -3,8 +3,7 @@
     justify-content: space-between;
     width: 100%;
     font-size: 40px;
-    background-color: azure;
-    border: 1px solid black;
+    background-color: #faf2f0;
     margin: 10px;
 
 }
@@ -12,6 +11,7 @@
 .img {
     max-width: 100px;
     max-height: 100px;
+    animation: rotation 2s infinite linear;
 }
 .title {
     margin: 0 auto;
@@ -24,3 +24,12 @@
 }
 }
 
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+
+}

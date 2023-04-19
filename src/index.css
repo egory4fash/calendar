@@ -1,8 +1,8 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',*/
+  /*  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',*/
+  /*  sans-serif;*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,11 +12,11 @@ code {
     monospace;
 }
 @font-face {
-  font-family: 'a_StamperRg&Bt_BELARUS';
-  src: local('a_StamperRg&Bt_BELARUS'),
-  url('./fonts/a_StamperRg&Bt_BELARUS.ttf') format('truetype');
+  font-family: 'a_BosaNovaCps_BELARUS';
+  src: local('a_BosaNovaCps_BELARUS'),
+  url('./fonts/a_BosaNovaCps_BELARUS.ttf') format('truetype');
   font-weight: bold;
 }
-.font-BOD_NBBI_BELARUS {
-  font-family: 'a_StamperRg&Bt_BELARUS';
+.font-a_BosaNovaCps_BELARUS {
+  font-family: 'a_BosaNovaCps_BELARUS',sans-serif;
 }

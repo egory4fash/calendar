@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {useSelector} from "react-redux";
 import {AppRootStateType} from "../../data/store";
 import {CalendarType, monthsInRussian} from "../../data/initial_state";
@@ -11,35 +11,41 @@ const AllYear = () => {
 
     let allYear = useSelector<AppRootStateType, Array<CalendarType>>(state => state.reducer.data)
 
-    const onClickHandler = (e: React.MouseEvent<HTMLDivElement>) => {
-        alert(e.currentTarget.id)
-    }
+const [toggle,setToggle] = useState<boolean>(true)
 
-    // let data = allYear.map( (m) => {
-    //     return(
-    //         <div key={`${m.name}+${m.date}`} id ={m.index.toString()} onClick = {onClickHandler}>
-    //             <div>{m.town}</div>
-    //             <div>{m.date}</div>
-    //             <div>{m.description}</div>
-    //         </div>)})
 
-    let global = []
+
+    let mappedAllYear = []
     for (let i = 0; i < 12; i++) {
         let title = monthsInRussian[i]
         let filteredMonth = allYear.filter((f) => +f.month === i+1)
-        global.push(
-            <SingleMonth key={`${title}+${i.toString()}`}  title={title} data={filteredMonth}/>
+        mappedAllYear.push(
+            <SingleMonth  key={`${title}+${i.toString()}`}  title={title} data={filteredMonth}/>
         )
+    }
 
+    const toggleHandler = (e:React.MouseEvent<HTMLDivElement>) => {
+        setToggle(!toggle)
     }
 
 
     return (
         <>
-            <div className={s.all} >
-                {global}
-            </div>
-
+            {toggle?
+                <div className = {s.container} onClick={toggleHandler}>
+                    <img className={s.img} src={img}/>
+                    <div className={s.title}>ВЕСЬ КАЛЕНДАРЬ</div>
+                </div>
+                :<>
+                    <div className = {s.container} onClick={toggleHandler}>
+                        <img className={s.img} src={img}/>
+                        <div className={s.title}>ВЕСЬ КАЛЕНДАРЬ</div>
+                    </div>
+                <div className={s.all}>
+                    {mappedAllYear}
+                </div>
+                    </>
+            }
         </>
     )
 }

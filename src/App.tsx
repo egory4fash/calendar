@@ -8,7 +8,7 @@ import Header from "./components/Header/Header";
 function App() {
 
     return (
-        <div className='font-BOD_NBBI_BELARUS'>
+        <div className='a_BosaNovaCps_BELARUS'>
             <Header/>
             <Calendar/>
             <AllYear/>

@@ -33,7 +33,7 @@ const SingleEvent = (props: SingleEventPropsType) => {
             </div>
 
             {modal ? <div className = {s.description}>
-                    <button className = {s.button} onClick={closeModalHandler}>X</button>
+                    <button className = {s.button} onClick={closeModalHandler}>Х</button>
                     <h4>{props.description}</h4>
 
                 </div>

@@ -1,19 +1,25 @@
 .container {
     margin:25px;
-    background-color: lawngreen;
+    background-color: #faf2f0;
+    max-width: 300px;
+    color:red;
+    padding:5px;
 }
 
 
 .date {
     display: flex;
     justify-content: space-between;
+    color:black
 }
 
 .description {
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
-    background-color: darkseagreen;
+    background-color: #faf2f0;
+    color:black;
+
 }
 .button {
     width:25px;

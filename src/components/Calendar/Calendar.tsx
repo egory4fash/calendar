@@ -20,12 +20,13 @@ const Calendar = () => {
 
 
     let lang = 'ru'
-    let primaryColor = '#32a852'
-    let secondaryColor = '#ffffff'
+    let primaryColor = 'red'
+    let secondaryColor = '#faf2f0'
     let indicatorColor = 'red'
     let sidebarWidth = 100
     let detailWidth = 180
-    let onePanelAtATime =true
+    let onePanelAtATime = true
+    let todayColor = 'red'
 
     // const [currentEvent,setCurrentEvent,] = useState(text)
 
@@ -62,7 +63,7 @@ const Calendar = () => {
 
 
     let props = {events, lang, primaryColor, secondaryColor,indicatorColor, eventSelected,dateSelected,
-        sidebarWidth,detailWidth,onePanelAtATime}
+        sidebarWidth,detailWidth,onePanelAtATime,todayColor}
 
 
     return (

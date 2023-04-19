@@ -1,6 +1,7 @@
 import React from 'react'
 import {CalendarType} from "../../../data/initial_state";
 import SingleEvent from "./SingleEvent/SingleEvent";
+import s from './SingleMonth.module.css'
 
 type SingleMonthPropsType = {
     title?: string,
@@ -9,8 +10,6 @@ type SingleMonthPropsType = {
 
 
 const SingleMonth = (props: SingleMonthPropsType) => {
-    console.log(props)
-
 
     let mappedData = []
 
@@ -28,13 +27,13 @@ const SingleMonth = (props: SingleMonthPropsType) => {
     } else {
 
         mappedData.push(
-            <SingleEvent name={'НИХУЯ'}/>
+            <SingleEvent name={'На этот месяц ничего не запланировано...'}/>
         )
     }
 
 
     return (
-        <div>
+        <div className = {s.block}>
             <h2>{props.title}</h2>
             {mappedData}
 
