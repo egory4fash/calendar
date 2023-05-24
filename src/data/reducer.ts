@@ -2,23 +2,17 @@ import {CalendarType, initialState, InitialStateType} from "./initial_state";
 import {EventsType} from "./events";
 
 
-export const Reducer = (state:InitialStateType = initialState,action:ActionsType):InitialStateType => {
+export const Reducer = (state: InitialStateType = initialState, action: ActionsType): InitialStateType => {
     switch (action.type) {
         case 'GET-STATE':
             return state
         case 'GET-EVENT' :
-            // let newState = structuredClone(state)
-            // console.log(newState)
-            // // return newState
-// alert('asdasda')
-            console.log(action.payload.index)
-            let filtered = state.data.filter ( f => f.index === action.payload.index)
+            let filtered = state.data.filter(f => f.index === action.payload.index)
             console.log(filtered)
-let smth = {...state,currentEvent:filtered}
-            // console.log(smth)
-            return smth
+            let data = {...state, currentEvent: filtered}
+            return data
         case "SET-CURRENT-EVENT":
-            return {...state,currentEvent:action.payload.data}
+            return {...state, currentEvent: action.payload.data}
         default:
             return state
     }
@@ -31,7 +25,7 @@ export const getState = () => {
     } as const
 }
 
-export const getEvent = (index:number) => {
+export const getEvent = (index: number) => {
     return {
         type: "GET-EVENT",
         payload: {
@@ -40,7 +34,7 @@ export const getEvent = (index:number) => {
     } as const
 }
 
-export const setCurrentEvent = (data:CalendarType[]) => {
+export const setCurrentEvent = (data: CalendarType[]) => {
     return {
         type: "SET-CURRENT-EVENT",
         payload: {

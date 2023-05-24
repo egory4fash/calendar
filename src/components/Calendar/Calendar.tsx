@@ -26,6 +26,8 @@ const Calendar = () => {
     let detailWidth = 180
     let onePanelAtATime = true
     let todayColor = 'red'
+    let detailDefault = true
+
 
 
 
@@ -38,8 +40,10 @@ const Calendar = () => {
          }
     }
 
+
+
     let props = {events, lang, primaryColor, secondaryColor,indicatorColor, eventSelected,
-        sidebarWidth,detailWidth,onePanelAtATime,todayColor}
+        sidebarWidth,detailWidth,onePanelAtATime,todayColor,detailDefault}
 
 
     return (

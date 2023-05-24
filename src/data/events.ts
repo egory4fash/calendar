@@ -43,7 +43,7 @@ const events:EventsType = [
     },
     {
         name:Pagliadzi.title ,
-        date:1684652350000 ,
+        date:1685432285000 ,
         allDay: true,
         extra:{
             text:'Верхнедвинск'
