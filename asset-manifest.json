@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/calendar/static/css/main.64f32752.css",
-    "main.js": "/calendar/static/js/main.f092fb97.js",
+    "main.js": "/calendar/static/js/main.8537cc6d.js",
     "static/js/787.f4b9e84d.chunk.js": "/calendar/static/js/787.f4b9e84d.chunk.js",
     "static/media/a_BosaNovaCps_BELARUS.ttf": "/calendar/static/media/a_BosaNovaCps_BELARUS.265cdfafccc077024052.ttf",
     "index.html": "/calendar/index.html",
     "main.64f32752.css.map": "/calendar/static/css/main.64f32752.css.map",
-    "main.f092fb97.js.map": "/calendar/static/js/main.f092fb97.js.map",
+    "main.8537cc6d.js.map": "/calendar/static/js/main.8537cc6d.js.map",
     "787.f4b9e84d.chunk.js.map": "/calendar/static/js/787.f4b9e84d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.64f32752.css",
-    "static/js/main.f092fb97.js"
+    "static/js/main.8537cc6d.js"
   ]
 }
